@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45;net46;net47</TargetFrameworks>
+    <Configurations>Debug;Release</Configurations>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.01</Version>
+    <Description>Objectified wrapper of Selenium WebDriver (or other Automation Frameworks) with Functional Programming practices to create realiable Automation Test suites.</Description>
+    <Copyright>Copyright (c) 2017-19 William JIANG</Copyright>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Cruisoring/Dynomation</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/Cruisoring/Dynomation</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Cruisoring/Dynomation</RepositoryUrl>
+    <PackageReleaseNotes>Limited documentations unless used by noticeable users.</PackageReleaseNotes>
+    <PackageTags>WebDriver, AutomationTesting, FunctionalProgramming</PackageTags>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>nuget.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <!-- .NET Standard 2.0 references, compilation flags and build options -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45'">
+    <DefineConstants>NET45;NETFULL</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46'">
+    <DefineConstants>NET46;NETFULL</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net47'">
+    <DefineConstants>NET47;NETFULL</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Selenium.Support" Version="4.0.0-alpha01" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.0.0-alpha01" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(DefineConstants.Contains('NETFULL'))">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+</Project>

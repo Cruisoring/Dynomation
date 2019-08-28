@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>0.0.1-alpha</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <license type="expression">Apache-2.0</license>
+    <projectUrl>https://github.com/Cruisoring/Dynomation</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Quick release without documentation.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>WebDriver Automation Dynomation UILocator</tags>
+  </metadata>
+</package>
